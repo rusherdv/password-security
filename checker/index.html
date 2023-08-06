@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/28d451baba.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="w-full h-16 bg-gray-200 flex justify-around items-center fixed">
+        <div class="flex text-2xl">
+            <h1 class="font-extrabold text-gray-500">Password</h1>
+            <h1 class="font-extrabold text-orange-500 pl-2">Generator</h1>
+        </div>
+        <div class="w-60 flex justify-around">
+            <a href="http://127.0.0.1:5500/index.html" class="text-black hover:underline">Home</a>
+            <a href="http://127.0.0.1:5500/generator/index.html" class="text-black hover:underline">Generator</a>
+            <a href="http://127.0.0.1:5500/checker/index.html" class="text-black hover:underline">Checker</a>
+        </div>
+    </nav>
+    <div class="flex justify-center items-center h-screen">
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="text-5xl font-extrabold text-gray-600 mb-2">Check how Secure is your Password</h1>
+            <input type="text" class="border-2 w-96 h-10 rounded-xl mt-2 outline-none pl-2 pr-2" id="passwordInput">
+            <div class="flex justify-around items-center flex-col">
+                <div class="flex">
+                    <h1 class="text-3xl font-bold text-green-500" id="state">STATE</h1>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-xl text-red-600 font-bold">Our recomendation</h1>
+                    <p id="recomendation"></p>
+                </div>
+            </div>
+            <button id="checkButton" class="hover:cursor-pointer hover:bg-green-500 mt-5 text-2xl font-bold bg-green-400 text-white w-80 h-14 flex items-center justify-center rounded-xl">Check Password</button>
+            <div class="flex items-center justify-center mt-5">
+                <h1 class="text-5xl font-bold " id="passwordContent"></h1><i class="fa-solid fa-eye text-2xl ml-2 hidden hover:cursor-pointer" onclick="revealPassword()"></i><i class="fa-solid fa-eye-slash text-2xl ml-2 hidden hover:cursor-pointer" onclick="hiddenPassword()"></i>
+            </div>
+
+        </div>
+    </div>
+    <footer class="h-20 bg-gray-200 items-center flex justify-center flex-col">
+        <h1>2023 Rusher Development</h1>
+        <a href="https://github.com/rusherdv" class="hover:underline">Github</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

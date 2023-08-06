@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/28d451baba.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="w-full h-16 bg-gray-200 flex justify-around items-center fixed">
+        <div class="flex text-2xl">
+            <h1 class="font-extrabold text-gray-500">Password</h1>
+            <h1 class="font-extrabold text-orange-500 pl-2">Generator</h1>
+        </div>
+        <div class="w-60 flex justify-around">
+            <a href="http://127.0.0.1:5500/index.html" class="text-black hover:underline">Home</a>
+            <a href="http://127.0.0.1:5500/generator/index.html" class="text-black hover:underline">Generator</a>
+            <a href="http://127.0.0.1:5500/checker/index.html" class="text-black hover:underline">Checker</a>
+        </div>
+    </nav>
+    <div class="flex justify-center items-center h-screen">
+        <div class="w-3/12 mr-20">
+            <h1 class="font-extrabold text-gray-500 text-2xl">This website was created for avoid the hackers. Today you can lose all of your passwords and your money on your digital bank, so it's the time to change your passwords!</h1>
+            <div class="flex justify-start mt-5">
+                <button onclick="window.location.href = 'http://127.0.0.1:5500/checker/index.html'" class="w-48 bg-indigo-500 rounded-xl h-10 flex items-center justify-center font-bold text-white">Check Password</button>
+                <button onclick="window.location.href = 'http://127.0.0.1:5500/generator/index.html'"class="w-48 bg-red-500 rounded-xl h-10 flex items-center justify-center font-bold text-white ml-5">Generate Password</button>
+            </div>
+        </div>
+        <div>
+            <i class="fa-solid fa-lock"></i>
+        </div>
+    </div>
+    <div class="flex justify-center items-center flex-col mb-32">
+        <h1 class="disclaimer text-red-600 font-extrabold">DISCLAIMER</h1>
+        <p class="disclaimerText font-bold flex justify-center mt-2 text-center">None of the data used on this page is saved, used or sold to anyone. We protect your privacy and you can use the page without concern.</p>
+    </div>
+    <footer class="h-20 bg-gray-200 items-center flex justify-center flex-col">
+        <h1>2023 Rusher Development</h1>
+        <a href="https://github.com/rusherdv" class="hover:underline">Github</a>
+    </footer>
+</body>
+</html>
