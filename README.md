@@ -2,6 +2,8 @@
 
 A secure password generator and checker coded on Javascript
 
+Deploy: <a href="https://fastidious-meerkat-69610d.netlify.app/" target="_blank">Click</a>
+
 This is based on security points
 
 - Capital letters
