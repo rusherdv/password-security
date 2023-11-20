@@ -21,8 +21,9 @@
             <a href="../checker/index.html" class="text-black hover:underline">Checker</a>
         </div>
     </nav>
-    <div class="flex justify-center items-center h-screen">
-        <div class="flex flex-col items-center justify-center">
+    <div class="flex justify-center items-center h-screen w-10/12 m-auto">
+        
+        <div class="flex flex-col items-center justify-center w-full">
             <h1 class="text-5xl font-extrabold text-gray-600 mb-2">Generate a Secure Password</h1>
             <div class="flex justify-around items-center flex-col">
                 <div class="flex">
@@ -40,20 +41,25 @@
                     </div>
                 </div>
                 <div class="mt-2">
-                    <input type="number" id="letterCount" class="border-2 outline-none pl-2 w-14 rounded-lg text-sm">
+                    <input type="number" max="256" id="letterCount" class="border-2 outline-none pl-2 w-14 rounded-lg text-sm">
                     <label>Letter count</label>
                 </div>
             </div>
-            <button id="generateButton" class="hover:cursor-pointer hover:bg-green-500 mt-5 text-2xl font-bold bg-green-400 text-white w-80 h-14 flex items-center justify-center rounded-xl">Generate Password</button>
-            <div class="flex items-center justify-center mt-5">
-                <h1 class="text-5xl font-bold " id="passwordContent"></h1><i class="fa-solid fa-eye text-2xl ml-2 hidden hover:cursor-pointer" onclick="revealPassword()"></i><i class="fa-solid fa-eye-slash text-2xl ml-2 hidden hover:cursor-pointer" onclick="hiddenPassword()"></i>
+            
+            <div class="flex items-center">
+                <button id="generateButton" class="hover:cursor-pointer hover:bg-green-500 mt-5 text-2xl font-bold bg-green-400 text-white w-80 h-14 flex items-center justify-center rounded-xl">Generate Password</button><i class="fa-solid fa-eye text-2xl ml-2 hidden hover:cursor-pointer" onclick="revealPassword()"></i><i class="fa-solid fa-eye-slash text-2xl ml-2 hidden hover:cursor-pointer" onclick="hiddenPassword()"></i>
             </div>
+            
+            <div class="flex items-center justify-center mt-5 w-full">
+                <h1 class="text-2xl break-words w-full text-center" id="passwordContent"></h1>
+            </div>
+            
             <div class="absolute text-center bottom-10">
                 <h1 class="text-xl text-red-600 font-bold">Our recomendation</h1>
                 <p>Use all the filters and a minium of 16 letters</p>
             </div>
-
         </div>
+
     </div>
     <footer class="h-20 bg-gray-200 items-center flex justify-center flex-col">
         <h1>2023 Rusher Development</h1>
