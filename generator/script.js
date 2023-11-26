@@ -4,11 +4,7 @@ const incluirExtraLetras = document.querySelector('#iELetters')
 const cantidadLetras = document.querySelector('#letterCount')
 const generateButton = document.querySelector('#generateButton')
 const passwordContent = document.querySelector('#passwordContent')
-
-let currentPassword = ''
-let finalresult = ''
-
-let hidden = 1
+const copyButton = document.querySelector('#copyButton')
 
 window.addEventListener("DOMContentLoaded", (event) => {
     cantidadLetras.value = 16
@@ -18,10 +14,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 generateButton.addEventListener('click', generatePassword)
+copyButton.addEventListener('click', copiarAlPortapapeles)
 
 function generatePassword(){
-    currentPassword = ''
-    finalresult = ''
     let characters = '';
 
     if (incluirLetras.checked == true){
@@ -47,29 +42,46 @@ function generatePassword(){
       counter += 1;
     }
 
-    currentPassword = result
-    for(let i = 0; i <= cantidadLetras.value; i++){
-        finalresult = finalresult + "*"
-    }
-    
-    if (hidden == 0){
-        passwordContent.innerText = result
-    }else if (hidden == 1){
-        passwordContent.innerText = finalresult
-        document.querySelector('.fa-eye').classList.remove("hidden")
-    }
+    passwordContent.value = result
 }
 
-function revealPassword(){
-    hidden = 0
-    document.querySelector('.fa-eye').classList.add("hidden")
-    passwordContent.innerText = currentPassword
-    document.querySelector('.fa-eye-slash').classList.remove("hidden")
+function copiarAlPortapapeles() {
+    if(passwordContent.value.trim() === ''){
+        Toastify({
+            text: "Fill or generate a password",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: false,
+            gravity: "bottom", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "red",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+    }else{
+        var elementoTemp = document.createElement("textarea");
+        elementoTemp.value = passwordContent.value;
+        document.body.appendChild(elementoTemp);
+        elementoTemp.select();
+        document.execCommand("copy");
+        document.body.removeChild(elementoTemp);
+        Toastify({
+            text: "Copied to clipboard",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: false,
+            gravity: "bottom", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              background: "green",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+    }
 }
-
-function hiddenPassword(){
-    hidden = 1
-    passwordContent.innerText = finalresult
-    document.querySelector('.fa-eye-slash').classList.add("hidden")
-    document.querySelector('.fa-eye').classList.remove("hidden")
-}
+  

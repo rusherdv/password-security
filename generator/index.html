@@ -8,63 +8,71 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/28d451baba.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="shortcut icon" href="../img/security.ico" type="image/x-icon">
 </head>
 <body>
-    <nav class="w-full h-16 bg-gray-200 flex justify-around items-center fixed">
-        <div class="flex text-2xl">
-            <h1 class="font-extrabold text-gray-500">Password</h1>
-            <h1 class="font-extrabold text-orange-500 pl-2">Generator</h1>
+
+    <nav class="w-full h-16 bg-gray-200 flex justify-around items-center fixed max-sm:flex-col max-sm:pt-3 max-sm:justify-center max-sm:h-auto max-sm:w-full">
+        <div class="flex inter600 text-2xl">
+            <h1 class="text-gray-500">Password</h1>
+            <h1 class="text-orange-500 pl-2">Generator</h1>
         </div>
-        <div class="w-60 flex justify-around">
+        <div class="w-60 flex justify-around inter400 max-sm:mt-2 max-sm:mb-2">
             <a href="../index.html" class="text-black hover:underline">Home</a>
             <a href="./index.html" class="text-black hover:underline">Generator</a>
             <a href="../checker/index.html" class="text-black hover:underline">Checker</a>
         </div>
     </nav>
-    <div class="flex justify-center items-center h-screen w-10/12 m-auto">
+
+    <div class="flex justify-center items-center h-screen w-10/12 m-auto max-lg:w-full">
         
-        <div class="flex flex-col items-center justify-center w-full">
-            <h1 class="text-5xl font-extrabold text-gray-600 mb-2">Generate a Secure Password</h1>
+        <div class="flex flex-col items-center justify-center w-8/12 max-lg:w-full">
+            <h1 class="text-5xl inter900 text-gray-600 mb-2 max-md:text-3xl max-sm:text-3xl max-sm:text-center">Generate a Secure Password</h1>
             <div class="flex justify-around items-center flex-col">
-                <div class="flex">
+                <div class="flex inter400 max-sm:flex-col max-sm:items-start">
                     <div class="flex justify-center items-center">
                         <input type="checkbox" id="iLetters">
-                        <label class="ml-2">Include Letters</label>
+                        <label class="ml-2 max-md:text-sm">Include Letters</label>
                     </div>
-                    <div class="flex justify-center items-center ml-4">
+                    <div class="flex justify-center items-center ml-4 max-sm:ml-0 max-sm:mt-1">
                         <input type="checkbox" id="iNumbers">
-                        <label class="ml-2">Include Numbers</label>
+                        <label class="ml-2 max-md:text-sm">Include Numbers</label>
                     </div>
-                    <div class="flex justify-center items-center ml-4">
+                    <div class="flex justify-center items-center ml-4 max-sm:ml-0 max-sm:mt-1">
                         <input type="checkbox" id="iELetters">
-                        <label class="ml-2">Include Extra Letters</label>
+                        <label class="ml-2 max-md:text-sm">Include Extra Letters</label>
                     </div>
                 </div>
-                <div class="mt-2">
+                <div class="mt-2 inter400 max-sm:mr-5">
                     <input type="number" max="256" id="letterCount" class="border-2 outline-none pl-2 w-14 rounded-lg text-sm">
-                    <label>Letter count</label>
+                    <label class="max-md:text-sm">Letter count</label>
                 </div>
             </div>
             
-            <div class="flex items-center">
-                <button id="generateButton" class="hover:cursor-pointer hover:bg-green-500 mt-5 text-2xl font-bold bg-green-400 text-white w-80 h-14 flex items-center justify-center rounded-xl">Generate Password</button><i class="fa-solid fa-eye text-2xl ml-2 hidden hover:cursor-pointer" onclick="revealPassword()"></i><i class="fa-solid fa-eye-slash text-2xl ml-2 hidden hover:cursor-pointer" onclick="hiddenPassword()"></i>
+            <div class="flex items-center max-sm:w-7/12">
+                <button id="generateButton" class="hover:cursor-pointer hover:bg-green-600 inter400 mt-5 max-sm:text-lg text-xl bg-green-500 text-white w-96 h-12 flex items-center justify-center rounded-lg">Generate Password</button>
             </div>
             
-            <div class="flex items-center justify-center mt-5 w-full">
-                <h1 class="text-2xl break-words w-full text-center" id="passwordContent"></h1>
+            <div class="flex items-center border-2 justify-center mt-5 rounded-lg w-8/12">
+                <input type="text" class=" text-black pl-4 pr-4 pt-3 pb-3 outline-none w-full" placeholder="Password" id="passwordContent">
+                <div title="Copy" id="copyButton" class="hover:cursor-pointer">
+                    <i class="fa-solid fa-copy text-gray-700 pr-4"></i>
+                </div>
             </div>
             
-            <div class="absolute text-center bottom-10">
-                <h1 class="text-xl text-red-600 font-bold">Our recomendation</h1>
-                <p>Use all the filters and a minium of 16 letters</p>
+            <div class="absolute max-sm:w-10/12 text-center inter400 bottom-10">
+                <h1 class="text-xl text-red-600 inter600">Our recomendation</h1>
+                <p>Use all the filters and a minium of 8 letters</p>
             </div>
         </div>
 
     </div>
-    <footer class="h-20 bg-gray-200 items-center flex justify-center flex-col">
+    <footer class="h-20 bg-gray-200 items-center flex justify-center flex-col inter400">
         <h1>2023 Rusher Development</h1>
         <a href="https://github.com/rusherdv" class="hover:underline">Github</a>
     </footer>
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

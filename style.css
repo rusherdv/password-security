@@ -1,12 +1,20 @@
-.fa-lock{
-    font-size: 200px;
-    color: orange;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600;900&display=swap');
+
+*{
+    border: 2px solid red;
 }
 
-.disclaimer{
-    font-size: 50px;
+.inter400{
+    font-family: 'Inter';
+    font-weight: 400;
 }
 
-.disclaimerText{
-    width: 500px;
+.inter600{
+    font-family: 'Inter';
+    font-weight: 600;
+}
+
+.inter900{
+    font-family: 'Inter';
+    font-weight: 900;
 }
