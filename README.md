@@ -21,8 +21,6 @@ This is based on security points
 
 ![password](https://github.com/rusherdv/password-security/assets/105472000/aaa37c84-f91a-4b54-b9f8-323f078f87b9)
 
-
-</div>
 <hr>
 
  📝 **|** **Contact**
