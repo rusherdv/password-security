@@ -19,7 +19,8 @@ This is based on security points
 
 <hr>
 
-![image](https://github.com/rusherdv/PasswordSecurity/assets/105472000/6f1d6e85-d16b-46e5-8cf6-59d950c3e131)
+![password](https://github.com/rusherdv/password-security/assets/105472000/aaa37c84-f91a-4b54-b9f8-323f078f87b9)
+
 
 </div>
 <hr>
